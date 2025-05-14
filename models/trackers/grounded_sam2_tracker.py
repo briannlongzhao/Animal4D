@@ -23,8 +23,8 @@ from models.utils import get_frame_images, Profiler
 
 class GroundedSAM2Tracker:
     def __init__(self, sam2_prompt_type, tracking_sam_step, device):
-        checkpoint = "externals/Grounded_SAM2/checkpoints/sam2_hiera_large.pt"
-        model_cfg = "sam2_hiera_l.yaml"
+        checkpoint = "externals/Grounded_SAM2/checkpoints/sam2.1_hiera_large.pt"
+        model_cfg = "sam2.1_hiera_l.yaml"
         model_id = "IDEA-Research/grounding-dino-tiny"
         self.tracking_sam_step = tracking_sam_step
         self.sam2_prompt_type = sam2_prompt_type
