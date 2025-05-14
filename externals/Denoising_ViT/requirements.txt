@@ -1,0 +1,18 @@
+torch
+torchvision
+timm==1.0.7
+# dev
+black
+isort
+jaxtyping
+
+# custom
+wandb
+matplotlib
+imageio
+imageio[ffmpeg]
+opencv-python
+scikit-image
+
+# clustering
+torch_kmeans

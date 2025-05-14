@@ -4,16 +4,18 @@ Code repo for collect and processing Animal4D data
 
 ## Installation
 
+Setup conda environment:
 ```bash
 conda env create -f environment.yml
 ```
 
-You also need to provide you OpenAI API key:
+Set OpenAI API key:
 ```bash
 export OPENAI_API_KEY=your_openai_api_key
 ```
 
 ## Stage 1: Download Videos
+
 ```bash
 python download_videos.py --config configs/config.yml
 ```

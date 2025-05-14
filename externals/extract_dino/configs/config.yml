@@ -1,0 +1,38 @@
+exp_name: ""
+
+n_clusters: 12
+name_depth: 3
+
+image_size: 256
+img_pad: 4
+
+n_images_cluster: 50
+metric: cos
+
+use_pca: True
+pca_dim: 16 #64
+save_pca_features: True
+
+save_clusters: True
+
+dim_in_filename: True
+
+save_visuals: True
+
+normalize_features: True
+
+device: cuda #cuda:0
+faiss_device: 1
+
+shuffle_data: True
+batch_size: 6
+
+use_saliency: True
+load_mask: True
+
+
+img_postfix_test: _rgb.png
+mask_postfix_test: _mask.png
+
+img_postfix_train: _rgb.png
+mask_postfix_train: _mask.png
