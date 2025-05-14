@@ -1,15 +1,15 @@
 base_path: "data"
 db_path: "data/database.sqlite"
 #categories: ["deer", "fox", "horse", "boar", "moose", "bear", "cow", "wolf", "rabbit", "panther", "leopard", "elephant", "tiger", "racoon", "cougar", "goat", "pig", "sheep", "hippo", "rhino", "zebra"]
-categories: ["dog", "cat", "tiger", "hippo"]
+categories: ["dog"]
 version: 3.0.0
 
 save_local_dir: "/scr-ssd/briannlz/video_object_processing/data"  # must be absolute path mapped to base_path
 
 
-max_video_per_category: 1000
-max_download: 1000
-max_query: 100
+max_video_per_category: 10
+max_download: 10
+max_query: 10
 
 filter_words: ["sound", "music", "song", "cartoon", "game", "anime"]
 shot_detector_threshold: 35
