@@ -1,0 +1,11 @@
+token.json
+credentials.json
+job_output/
+jobs/
+configs/config_SAM_occlusion_1st_stage.yml
+configs/config_SAM_occlusion_2nd_stage.yml
+configs/config_SAM_occlusion_3rd_stage.yml
+__pycache__/
+.idea/
+*.bkp
+

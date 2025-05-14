@@ -1,0 +1,15 @@
+[submodule "externals/Denoising_ViT"]
+	path = externals/Denoising_ViT
+	url = https://github.com/Jiawei-Yang/Denoising-ViT.git
+[submodule "externals/Grounded_SAM2"]
+	path = externals/Grounded_SAM2
+	url = https://github.com/IDEA-Research/Grounded-SAM-2.git
+[submodule "externals/SEA_RAFT"]
+	path = externals/SEA_RAFT
+	url = https://github.com/princeton-vl/SEA-RAFT.git
+[submodule "externals/capex"]
+	path = externals/capex
+	url = https://github.com/matanr/capex.git
+[submodule "externals/ViTPose"]
+	path = externals/ViTPose
+	url = https://github.com/ViTAE-Transformer/ViTPose.git

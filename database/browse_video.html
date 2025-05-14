@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Manager</title>
+</head>
+
+<body>
+<h1>Video Manager</h1>
+<ul>
+  {% for video in videos %}
+  <li>
+    <h2>{{video.category}} - {{ video.video_id }}</h2>
+    <video width="600" height="600" controls>
+      <source class="video-src" src="{{ video.video_path }}" type="video/mp4">
+    </video>
+    <form action="{{ url_for('delete_video', video_id=video.video_id) }}" method="post" style="display:inline;">
+      <button type="submit">Delete</button>
+    </form>
+  </li>
+  {% endfor %}
+</ul>
+
+<script>
+  const base_url = "http://vcv.stanford.edu/viscam/projects/animal_motion/briannlz/video_object_processing/";
+  const urls = document.querySelectorAll('.video-src');
+  urls.forEach(function(url) {
+      url.src = base_url + url.getAttribute("src");
+  });
+</script>
+</body>
+</html>

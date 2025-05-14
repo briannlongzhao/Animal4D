@@ -1,0 +1,12 @@
+base_path: "data"
+db_path: "data/database.sqlite"
+categories: ["horse"]
+max_download: 20
+num_proces: 5
+query_word_method: gpt  # wordnet, gpt
+query_phrase_method: gpt  # pytube, selenium, gpt
+scrape_method: selenium  # api, pytube, selenium
+shot_detector_threshold: 35
+min_scene_len: 30
+clip_filter_threshold: 25
+still_frame_filter_threshold: 15

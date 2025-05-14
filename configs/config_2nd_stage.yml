@@ -1,0 +1,25 @@
+
+
+
+curr_base_dir: 'data/tmp/horse'
+folder_name_ext: 2nd_stage
+num_gpus: 1
+video_n_init: 0
+video_n_end: 1
+
+#############################################################
+
+
+percent_outside_threshold: 0.3 #0.15
+smooth_avg_len: 5
+out_size: 256
+ratio_crop_size: 1.0 #for dogs and giraffs 1.2
+ignore_cumulative_flow: False
+save_motion: True
+add_crop_margin: 0.01
+
+allowed_occlusion_perc: 0.15
+allowed_truncation_perc: 0.0001
+
+video_min_time: 1
+video_max_time: 200

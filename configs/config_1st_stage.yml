@@ -1,0 +1,47 @@
+base_path: data/tmp
+
+db_path: data/database.sqlite
+categories: horse
+resume: False
+compute_occlusion: False
+debug: False
+verbose: True
+
+tracking_method: naive  # naive, sam_track, sam2
+tracking_sam_gap: 1
+
+
+###############################################
+
+
+frame_stride: 1
+detectron2_path: externals/detectron2
+percent_outside_threshold: 0.3 
+video_min_time: 1
+video_max_time: 200
+ratio_crop_size: 1.0 #for dogs and giraffs 1.2
+iou_threshold: 0.1
+smallest_box_size: 128
+
+depth_model: "midas"
+
+patchfusion_path: 'externals/PatchFusion/'
+patchfusion_ckpt_path: 'nfs/patchfusion_u4k.pt'
+patchfusion_model: 'zoedepth_custom'
+patchfusion_model_cfg_path: 'zoedepth/models/zoedepth_custom/configs/config_zoedepth_patchfusion.json'
+patchfusion_mode: 'p16'
+
+
+depth_boundary: 0
+depth_blur_mask: True
+
+
+border_pool_size: 5
+occlusion_high_threshold: 0.05
+occlusion_low_threshold: -0.07
+
+
+
+
+
+

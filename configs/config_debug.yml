@@ -1,0 +1,23 @@
+base_path: "data"
+db_path: "data/database.sqlite"
+categories: horse
+version: 1.0.0
+
+
+max_download: 99999999
+shot_detector_threshold: 35
+max_scene_len: 1000
+clip_filter_threshold: 25
+still_frame_filter_threshold: 0.1
+keep_discarded: True
+dry_run: True
+
+max_track_gap: 5
+compute_occlusion: True
+depth_method: depth_anything_v2  # patchfusion, depth_anything, depth_anything_v2
+tracking_sam_step: 50
+debug: True
+verbose: True
+tracking_method: grounded_sam2  # naive, grounded_sam2, sam_track
+sam2_prompt_type: mask
+save_visualization: True

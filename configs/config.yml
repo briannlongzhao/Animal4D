@@ -1,0 +1,30 @@
+base_path: "data"
+db_path: "data/database.sqlite"
+#categories: ["deer", "fox", "horse", "boar", "moose", "bear", "cow", "wolf", "rabbit", "panther", "leopard", "elephant", "tiger", "racoon", "cougar", "goat", "pig", "sheep", "hippo", "rhino", "zebra"]
+categories: ["dog", "cat", "tiger", "hippo"]
+version: 3.0.0
+
+save_local_dir: "/scr-ssd/briannlz/video_object_processing/data"  # must be absolute path mapped to base_path
+
+
+max_video_per_category: 1000
+max_download: 1000
+max_query: 100
+
+filter_words: ["sound", "music", "song", "cartoon", "game", "anime"]
+shot_detector_threshold: 35
+max_scene_len: 1000
+clip_filter_threshold: 23
+still_frame_filter_threshold: 0.1
+keep_discarded: False
+dry_run: False
+
+max_track_gap: 5
+compute_occlusion: True
+compute_flow: True
+compute_pose: True
+tracking_sam_step: 50
+debug: True
+verbose: True
+sam2_prompt_type: mask
+save_visualization: True

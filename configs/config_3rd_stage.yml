@@ -1,0 +1,55 @@
+
+curr_base_dir: data/data_temp
+batch_size: 8
+
+# DINOv2
+#model_type: dinov2_vitb14
+#stride: 7
+#image_size: 560
+#img_pad: 0
+#facet: token
+
+## DINO
+#model_type: dino_vits8
+#stride: 4
+#image_size: 256
+#img_pad: 4
+#facet: key
+
+# Featup
+model_type: dino_vits8
+featup: True
+image_size: 224
+
+#denoise: True
+denoiser_ckpt_path: externals/Denoising_ViT/ckpt/dinov2_v1.pth
+
+
+#fuse_sd: True
+
+n_random_sample: 200
+
+layer: 11
+
+n_images_cluster: 50
+
+use_pca: True
+pca_dim: 16 #64
+save_pca_features: True
+
+save_clusters: True
+
+dim_in_filename: True
+
+save_visuals: True
+
+normalize_features: True
+
+device: cuda
+faiss_device: 1
+
+shuffle_data: False
+use_saliency: True
+load_mask: True
+img_postfix: _rgb.jpg
+mask_postfix: _mask.png
