@@ -58,6 +58,7 @@ class VideoPreprocessor:
     def init_database(self, db_path, version):
         self.db = Database(db_path=db_path, version=version)
         self.db.make_clip_table()
+        self.db.make_track_table()
 
     @staticmethod
     def save_stats_plot(scene_list, stats_file_path, plot_path, video_id, threshold):
