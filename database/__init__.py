@@ -657,10 +657,13 @@ def remove_track(video_id=None, clip_id=None, track_id=None, version=None, db_pa
     version_dict = parse_version(version)
     track_version = version_dict.get("track")
     track_table = f"track_{track_version}" if track_version else "track"
-    track_dir = get_all_tracks(
+    all_tracks = get_all_tracks(
         condition="track_path IS NOT NULL AND location = 'viscam'",
         version=version, db_path=db_path
-    )[0].get("track_path")
+    )
+    if not all_tracks:
+        return
+    track_dir = all_tracks[0].get("track_path")
     track_dir = Path(track_dir).parent.parent.parent
     if video_id:
         tracks = get_all_tracks(f"video_id = '{video_id}'", version=version, db_path=db_path)
