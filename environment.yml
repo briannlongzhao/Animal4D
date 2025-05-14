@@ -36,7 +36,7 @@ dependencies:
   - pip:  # TODO: move all to conda if possible
     - scenedetect==0.6.4
     - pytube==15.0.0
-    - pytubefix==8.12.0  # 8.5.1
+    - pytubefix==8.13.1
     - mmcv==1.3.9
     - openai==1.37.1
     - nltk==3.8.1

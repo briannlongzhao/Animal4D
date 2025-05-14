@@ -602,7 +602,10 @@ def remove_clip(video_id=None, clip_id=None, version=None, db_path=config_db_pat
     version_dict = parse_version(version)
     clip_version = version_dict.get("clip")
     clip_table = f"clip_{clip_version}" if clip_version else "clip"
-    clip_dir = get_all_clips(condition="clip_path IS NOT NULL", version=version, db_path=db_path)[0].get("clip_path")
+    all_clips = get_all_clips(condition="clip_path IS NOT NULL", version=version, db_path=db_path)
+    if not all_clips:
+        return
+    clip_dir = all_clips[0].get("clip_path")
     clip_dir = Path(clip_dir).parent.parent.parent
     if video_id:
         clips = get_all_clips(f"video_id = '{video_id}'", version=version, db_path=db_path)
