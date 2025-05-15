@@ -35,23 +35,69 @@ mkdir externals/ViTPose/ckpt && cd externals/ViTPose/ckpt
 wget https://download.cs.stanford.edu/viscam/Animal4D/ckpt/apt36k.pth
 ```
 
-## Stage 1: Download Videos
+## Data Collection
+
+### Stage 1: Download Videos
 
 ```bash
 python scripts/download_video.py --config configs/config.yml
 ```
 
-## Stage 2: Preprocessing
+### Stage 2: Preprocessing
+
 ```bash
 python scripts/preprocess_video.py --config configs/config.yml
 ```
 
-## Stage 3: Run Tracking
+### Stage 3: Run Tracking
+
 ```bash
 python scripts/track_animal.py --config configs/config.yml
 ```
 
-## Stage 4: Postprocessing
+### Stage 4: Postprocessing
+
 ```bash
 python scripts/build_dataset.py --config configs/config.yml
 ```
+
+## 4D Reconstruction
+
+### Run 3D/4D Fauna Inference
+
+Follow [3DAnimals](https://github.com/3DAnimals/3DAnimals/) to setup environment.
+
+Update `test_data_dir` variable with path to dataset directory.
+
+For 3D Fauna:
+
+Update `method` variable with "fauna".
+
+```shell
+python scripts/reconstruct_video_fauna.py
+```
+
+For 4D Fauna:
+
+Update `method` variable with "fauna++".
+
+```shell
+python scripts/reconstruct_video_fauna.py
+```
+
+### Run SMALify Inference
+
+Follow [SMALify](https://github.com/benjiebob/SMALify) to setup environment
+
+Update `data_dir` variable in `scripts/reconstruct_video_smalify.py` with path to dataset directory.
+
+```shell
+python scripts/reconstruct_video_smalify.py
+```
+
+### Run Benchmark
+
+```
+python scripts/run_benchmark.py --data_dir /path/to/dataset/dir
+```
+
